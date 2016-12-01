@@ -45,7 +45,8 @@ module.exports = function(schema) {
 
   schema.
     pre('find', autopopulateHandler).
-    pre('findOne', autopopulateHandler);
+    pre('findOne', autopopulateHandler)
+    post('save', autopopulateHandler);
 };
 
 function defaultOptions(pathname, v) {
